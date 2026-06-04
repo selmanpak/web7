@@ -1,0 +1,50 @@
+:root{
+  --green:#00B583;
+  --green-bright:#16e3a6;
+  --deep-green:#00291D;
+  --bg:#050807;
+  --bg-soft:#0a1310;
+  --white:#ffffff;
+  --muted:rgba(255,255,255,.62);
+  --muted-2:rgba(255,255,255,.40);
+  --line:rgba(0,181,131,.18);
+  --line-soft:rgba(255,255,255,.07);
+  --maxw:1200px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Montserrat',Arial,sans-serif;
+  background:var(--bg);
+  color:var(--white);
+  line-height:1.6;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--green);color:#00150e}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+h1,h2,h3{font-weight:800;line-height:1.08;letter-spacing:-.02em}
+.green{color:var(--green)}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:14px;
+  font-weight:700;
+  font-size:13px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  padding:15px 16px 15px 26px;
+  border-radius:60px;
+  cursor:pointer;
+  border:none;
+  transition:.35s var(--ease);
+}
+.btn .circ{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;transition:.35s var(--ease)}
+.btn .circ svg{width:15px;height:15px}
+.btn-primary{background:var(--green);color:#00150e}
+.btn-primary .circ{background:#00150e;color:var(--green)}
+.btn-primary:hover{background:var(--green-bright);transform:translateY(-2px);box-shadow:0 14px 40px -12px var(--green)}
+.btn-primary:hover .circ{transform:rotate(-45deg)}
+@media(max-width:680px){.wrap{padding:0 20px}}
