@@ -86,7 +86,7 @@
 
 .trust-flow-pulse {
   position: absolute;
-  left: 20px;
+  left: 0px;
   top: 34px;
   width: 16px;
   height: 16px;
@@ -251,7 +251,7 @@
   }
 
   .trust-flow-pulse {
-    left: 16px;
+    left: 0px;
   }
 
   .trust-flow-item {
