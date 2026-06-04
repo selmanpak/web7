@@ -6,7 +6,9 @@ function initRevealAnimations() {
   revealItems.forEach((item) => item.classList.remove('in'));
 
   if (!('IntersectionObserver' in window)) {
-    revealItems.forEach((item) => item.classList.add('in'));
+    requestAnimationFrame(() => {
+      revealItems.forEach((item) => item.classList.add('in'));
+    });
     return;
   }
 
@@ -25,7 +27,11 @@ function initRevealAnimations() {
     }
   );
 
-  revealItems.forEach((item) => observer.observe(item));
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      revealItems.forEach((item) => observer.observe(item));
+    });
+  });
 }
 
 document.addEventListener('DOMContentLoaded', initRevealAnimations);
