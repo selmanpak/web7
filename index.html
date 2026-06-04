@@ -28,88 +28,13 @@
 <link rel="icon" href="assets/favicon-16.png" sizes="16x16" type="image/png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"FirstData","alternateName":"FirstData Group","url":"https://selmanpak.github.io/web7/","logo":"https://selmanpak.github.io/web7/assets/icon-512.png","description":"Regulated, AI-integrated infrastructure for tokenizing real-world assets.","slogan":"Empowering solutions through Data & AI","foundingDate":"2023","address":{"@type":"PostalAddress","streetAddress":"2239 Al Urubah Rd, Al Olaya Dist.","postalCode":"12214","addressLocality":"Riyadh","addressCountry":"SA"},"email":"info@1stdata.ai","telephone":"+966112111556","areaServed":"Saudi Arabia"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"FirstData","alternateName":"FirstData Group","url":"https://selmanpak.github.io/web7/","logo":"https://selmanpak.github.io/web7/assets/icon-512.png","description":"Regulated, AI-integrated infrastructure for tokenizing real-world assets.","slogan":"Empowering solutions through Data & AI","foundingDate":"2023","areaServed":"Saudi Arabia"}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-<style>
-:root{
-  --green:#00B583;
-  --green-bright:#16e3a6;
-  --deep-green:#00291D;
-  --bg:#050807;
-  --bg-soft:#0a1310;
-  --white:#ffffff;
-  --muted:rgba(255,255,255,.62);
-  --muted-2:rgba(255,255,255,.40);
-  --line:rgba(0,181,131,.18);
-  --line-soft:rgba(255,255,255,.07);
-  --maxw:1200px;
-  --ease:cubic-bezier(.22,.61,.36,1);
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{
-  font-family:'Montserrat',Arial,sans-serif;
-  background:var(--bg);
-  color:var(--white);
-  line-height:1.6;
-  overflow-x:hidden;
-  -webkit-font-smoothing:antialiased;
-}
-a{color:inherit;text-decoration:none}
-::selection{background:var(--green);color:#00150e}
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
-h1,h2,h3{font-weight:800;line-height:1.08;letter-spacing:-.02em}
-.green{color:var(--green)}
-.btn{
-  display:inline-flex;align-items:center;gap:14px;
-  font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;
-  padding:15px 16px 15px 26px;border-radius:60px;cursor:pointer;border:none;
-  transition:.35s var(--ease);
-}
-.btn .circ{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;transition:.35s var(--ease)}
-.btn .circ svg{width:15px;height:15px}
-.btn-primary{background:var(--green);color:#00150e}
-.btn-primary .circ{background:#00150e;color:var(--green)}
-.btn-primary:hover{background:var(--green-bright);transform:translateY(-2px);box-shadow:0 14px 40px -12px var(--green)}
-.btn-primary:hover .circ{transform:rotate(-45deg)}
-.logo{display:flex;align-items:center}
-.fdlogo{height:25px;width:auto;display:block;transition:.3s}
-header.scrolled .fdlogo{height:23px}
-header{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 0;transition:.4s var(--ease);border-bottom:1px solid transparent}
-header.scrolled{background:rgba(5,8,7,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line-soft);padding:13px 0}
-.nav{display:flex;align-items:center;justify-content:space-between}
-.nav-links{display:flex;align-items:center;gap:38px;list-style:none}
-.nav-links a{font-size:14px;font-weight:500;color:var(--muted);transition:.25s;position:relative}
-.nav-links a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--green);transition:.3s var(--ease)}
-.nav-links a:hover{color:#fff}.nav-links a:hover::after{width:100%}
-.nav-cta{display:flex;align-items:center;gap:18px}
-.menu-btn{display:none;background:none;border:none;color:#fff;cursor:pointer;flex-direction:column;gap:5px}
-.menu-btn span{width:24px;height:2px;background:#fff;border-radius:2px;transition:.3s}
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:140px 0 80px;overflow:hidden}
-.hero-bg{position:absolute;inset:0;z-index:0}
-.grid-tex{position:absolute;inset:0;opacity:.5;background-image:linear-gradient(var(--line-soft) 1px,transparent 1px),linear-gradient(90deg,var(--line-soft) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 80% 70% at 70% 40%,#000 0%,transparent 75%)}
-.glow{position:absolute;border-radius:50%;filter:blur(90px);opacity:.55}
-.glow.g1{width:620px;height:620px;background:radial-gradient(circle,rgba(0,181,131,.55),transparent 65%);top:-120px;right:-60px}
-.glow.g2{width:520px;height:520px;background:radial-gradient(circle,rgba(0,41,29,.9),transparent 70%);bottom:-160px;left:-120px;opacity:.9}
-.wedge{position:absolute;top:0;right:0;width:46%;height:100%;background:linear-gradient(150deg,var(--deep-green) 0%,rgba(0,41,29,0) 75%);clip-path:polygon(28% 0,100% 0,100% 100%,0% 100%);opacity:.55;z-index:0}
-.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;width:100%}
-.eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--green);margin-bottom:22px}
-.eyebrow::before{content:"";width:30px;height:3px;background:var(--green);border-radius:2px}
-.hero h1{font-size:clamp(38px,6vw,76px)}
-.hero h1 .accent{color:var(--green);display:inline-block}
-.hero p.sub{color:var(--muted);font-size:clamp(16px,1.6vw,19px);max-width:540px;margin:26px 0 38px;line-height:1.7}
-.hero-mark{position:relative;display:grid;place-items:center;min-height:360px}
-.hero-mark .ring{position:absolute;border:1px solid var(--line);border-radius:50%}
-.hero-mark .ring.r1{width:340px;height:340px;animation:spin 26s linear infinite}
-.hero-mark .ring.r2{width:250px;height:250px;border-style:dashed;border-color:rgba(0,181,131,.28);animation:spin 18s linear infinite reverse}
-.hero-mark .bigmark{width:auto;height:172px;filter:drop-shadow(0 18px 50px rgba(0,181,131,.55));animation:float 6s ease-in-out infinite}
-@keyframes spin{to{transform:rotate(360deg)}}
-@keyframes float{0%,100%{transform:translateY(-10px)}50%{transform:translateY(10px)}}
-@media(max-width:980px){.hero .wrap{grid-template-columns:1fr}}
-@media(max-width:680px){.nav-links,.nav-cta .btn{display:none}.menu-btn{display:flex}.nav-links.open{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:rgba(5,8,7,.97);backdrop-filter:blur(14px);padding:24px 28px;gap:22px;border-bottom:1px solid var(--line-soft)}.wrap{padding:0 20px}.hero{padding-top:120px}.hero-mark{min-height:260px}.hero-mark .bigmark{height:130px}.hero-mark .ring.r1{width:260px;height:260px}.hero-mark .ring.r2{width:190px;height:190px}}
-</style>
+<link rel="stylesheet" href="styles/global.css">
+<link rel="stylesheet" href="styles/header.css">
+<link rel="stylesheet" href="styles/home.css">
 </head>
 <body id="top">
   <div id="global-header"></div>
