@@ -1,4 +1,4 @@
-.trust-flow-section{background:radial-gradient(circle at 78% 25%,rgba(0,181,131,.16),transparent 34%),linear-gradient(180deg,var(--bg-soft),var(--bg));border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);overflow:hidden}
+.trust-flow-section{background:#000;border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);overflow:hidden}
 .trust-flow-wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
 .trust-flow-copy .trust-flow-tag{font-size:20px;font-weight:800;color:var(--green);margin:20px 0 14px}
 .trust-flow-copy p{color:var(--muted);font-size:15.5px;max-width:480px;line-height:1.7}
