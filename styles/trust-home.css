@@ -1,169 +1,26 @@
-.trust-flow-section {
-  background:
-    radial-gradient(circle at 78% 25%, rgba(0, 181, 131, .16), transparent 34%),
-    linear-gradient(180deg, var(--bg-soft), var(--bg));
-  border-top: 1px solid var(--line-soft);
-  border-bottom: 1px solid var(--line-soft);
-  overflow: hidden;
-}
+.trust-flow-section{background:radial-gradient(circle at 78% 25%,rgba(0,181,131,.16),transparent 34%),linear-gradient(180deg,var(--bg-soft),var(--bg));border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);overflow:hidden}
+.trust-flow-wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.trust-flow-copy .trust-flow-tag{font-size:20px;font-weight:800;color:var(--green);margin:20px 0 14px}
+.trust-flow-copy p{color:var(--muted);font-size:15.5px;max-width:480px;line-height:1.7}
+.trust-flow-actions{margin-top:30px}
+.trust-flow-panel{position:relative}
 
-.trust-flow-wrap {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-}
+#trust-compliance .chain,#trust-compliance .trust-flow-chain{position:relative;padding-left:6px}
+#trust-compliance .links{display:flex;flex-direction:column;gap:16px;position:relative;z-index:2}
+#trust-compliance .trust-flow-chain{display:flex;flex-direction:column;gap:16px;z-index:2}
+#trust-compliance .cline,#trust-compliance .trust-flow-line{position:absolute;left:28px;top:22px;bottom:22px;width:2px;background:var(--line-soft);z-index:1}
+#trust-compliance .ctoken,#trust-compliance .trust-flow-pulse{position:absolute;left:21px;top:0;width:16px;height:16px;border-radius:50%;background:var(--green-bright,var(--green));box-shadow:0 0 18px 3px rgba(22,227,166,.7);transition:top .9s var(--ease);z-index:3}
 
-.trust-flow-copy .trust-flow-tag {
-  font-size: 20px;
-  font-weight: 800;
-  color: var(--green);
-  margin: 20px 0 14px;
-}
+#trust-compliance .lk,#trust-compliance .trust-flow-item{display:flex;align-items:center;gap:15px;padding:16px 20px;border:1px solid var(--line-soft);border-radius:14px;background:var(--panel);position:relative;transition:.4s var(--ease);z-index:2}
+#trust-compliance .lk .ic,#trust-compliance .trust-flow-node{width:44px;height:44px;border-radius:11px;background:rgba(0,181,131,.12);color:var(--green);display:grid;place-items:center;flex:0 0 auto;transition:.4s}
+#trust-compliance .lk .ic svg,#trust-compliance .trust-flow-node svg{width:21px;height:21px}
+#trust-compliance .lk b,#trust-compliance .trust-flow-card b{display:block;font-size:14.5px;color:#fff}
+#trust-compliance .lk span,#trust-compliance .trust-flow-card span{display:block;font-size:12.5px;color:var(--muted-2)}
+#trust-compliance .lk .tick,#trust-compliance .trust-flow-check{margin-left:auto;width:24px;height:24px;border-radius:50%;background:rgba(0,181,131,.15);color:var(--green);display:grid;place-items:center;opacity:0;transform:scale(.5);transition:.4s;flex:0 0 auto}
+#trust-compliance .lk .tick svg,#trust-compliance .trust-flow-check svg{width:13px;height:13px}
+#trust-compliance .lk.lit,#trust-compliance .trust-flow-item.active,#trust-compliance .trust-flow-item.passed{border-color:var(--green)}
+#trust-compliance .lk.lit .ic,#trust-compliance .trust-flow-item.active .trust-flow-node,#trust-compliance .trust-flow-item.passed .trust-flow-node{background:rgba(0,181,131,.2);box-shadow:0 0 18px -4px var(--green)}
+#trust-compliance .lk.lit .tick,#trust-compliance .trust-flow-item.active .trust-flow-check,#trust-compliance .trust-flow-item.passed .trust-flow-check{opacity:1;transform:scale(1)}
 
-.trust-flow-copy p {
-  color: var(--muted);
-  font-size: 15.5px;
-  max-width: 480px;
-  line-height: 1.7;
-}
-
-.trust-flow-actions {
-  margin-top: 30px;
-}
-
-#trust-compliance .chain {
-  position: relative;
-  padding-left: 6px;
-}
-
-#trust-compliance .links {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  position: relative;
-  z-index: 2;
-}
-
-#trust-compliance .cline {
-  position: absolute;
-  left: 28px;
-  top: 22px;
-  bottom: 22px;
-  width: 2px;
-  background: var(--line-soft);
-  z-index: 1;
-}
-
-#trust-compliance .ctoken {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: var(--green-bright, var(--green));
-  box-shadow: 0 0 18px 3px rgba(22, 227, 166, .7);
-  transition: top .9s var(--ease);
-  z-index: 1;
-}
-
-#trust-compliance .lk {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  padding: 16px 20px;
-  border: 1px solid var(--line-soft);
-  border-radius: 14px;
-  background: var(--panel);
-  position: relative;
-  transition: .4s var(--ease);
-}
-
-#trust-compliance .lk .ic {
-  width: 44px;
-  height: 44px;
-  border-radius: 11px;
-  background: rgba(0, 181, 131, .12);
-  color: var(--green);
-  display: grid;
-  place-items: center;
-  flex: 0 0 auto;
-  transition: .4s;
-}
-
-#trust-compliance .lk .ic svg {
-  width: 21px;
-  height: 21px;
-}
-
-#trust-compliance .lk b {
-  display: block;
-  font-size: 14.5px;
-}
-
-#trust-compliance .lk span {
-  font-size: 12.5px;
-  color: var(--muted-2);
-}
-
-#trust-compliance .lk .tick {
-  margin-left: auto;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background: rgba(0, 181, 131, .15);
-  color: var(--green);
-  display: grid;
-  place-items: center;
-  opacity: 0;
-  transform: scale(.5);
-  transition: .4s;
-  flex: 0 0 auto;
-}
-
-#trust-compliance .lk .tick svg {
-  width: 13px;
-  height: 13px;
-}
-
-#trust-compliance .lk.lit {
-  border-color: var(--green);
-}
-
-#trust-compliance .lk.lit .ic {
-  background: rgba(0, 181, 131, .2);
-  box-shadow: 0 0 18px -4px var(--green);
-}
-
-#trust-compliance .lk.lit .tick {
-  opacity: 1;
-  transform: scale(1);
-}
-
-@media(max-width:880px) {
-  .trust-flow-wrap {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-}
-
-@media(max-width:680px) {
-  #trust-compliance .lk {
-    padding: 15px 16px;
-    gap: 12px;
-  }
-
-  #trust-compliance .cline {
-    left: 24px;
-  }
-
-  #trust-compliance .ctoken {
-    left: 0;
-  }
-
-  #trust-compliance .lk .ic {
-    width: 40px;
-    height: 40px;
-  }
-}
+@media(max-width:880px){.trust-flow-wrap{grid-template-columns:1fr;gap:40px}}
+@media(max-width:680px){#trust-compliance .lk,#trust-compliance .trust-flow-item{padding:15px 16px;gap:12px}#trust-compliance .cline,#trust-compliance .trust-flow-line{left:24px}#trust-compliance .ctoken,#trust-compliance .trust-flow-pulse{left:17px}#trust-compliance .lk .ic,#trust-compliance .trust-flow-node{width:40px;height:40px}}
