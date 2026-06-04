@@ -1,0 +1,293 @@
+.trust-flow-section {
+  background:
+    radial-gradient(circle at 78% 25%, rgba(0, 181, 131, .16), transparent 34%),
+    linear-gradient(180deg, var(--bg-soft), var(--bg));
+  border-top: 1px solid var(--line-soft);
+  border-bottom: 1px solid var(--line-soft);
+  overflow: hidden;
+}
+
+.trust-flow-wrap {
+  display: grid;
+  grid-template-columns: .95fr 1.05fr;
+  gap: 68px;
+  align-items: center;
+}
+
+.trust-flow-copy h2 {
+  font-size: clamp(30px, 4.4vw, 52px);
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.trust-flow-tag {
+  display: inline-block;
+  margin: 24px 0 16px;
+  color: var(--green);
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -.02em;
+}
+
+.trust-flow-copy p {
+  color: var(--muted);
+  font-size: 15.5px;
+  line-height: 1.75;
+  max-width: 560px;
+}
+
+.trust-flow-actions {
+  margin-top: 32px;
+}
+
+.trust-flow-panel {
+  position: relative;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+}
+
+.trust-flow-chain {
+  position: relative;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.trust-flow-line {
+  position: absolute;
+  top: 36px;
+  bottom: 36px;
+  left: 27px;
+  width: 2px;
+  background: linear-gradient(
+    transparent,
+    var(--line-soft) 8%,
+    var(--line) 50%,
+    var(--line-soft) 92%,
+    transparent
+  );
+  z-index: 0;
+}
+
+.trust-flow-line::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    transparent,
+    rgba(0, 181, 131, .15),
+    var(--green),
+    rgba(0, 181, 131, .15),
+    transparent
+  );
+  filter: blur(1px);
+  opacity: .75;
+}
+
+.trust-flow-pulse {
+  position: absolute;
+  left: 20px;
+  top: 34px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--green-bright, var(--green));
+  box-shadow:
+    0 0 18px rgba(0, 181, 131, .95),
+    0 0 46px rgba(0, 181, 131, .5);
+  z-index: 1;
+  transition: top .85s var(--ease);
+}
+
+.trust-flow-pulse::after {
+  content: "";
+  position: absolute;
+  inset: -9px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 181, 131, .35);
+  animation: trustFlowPulse 1.6s ease-out infinite;
+}
+
+.trust-flow-item {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 56px 1fr 32px;
+  gap: 18px;
+  align-items: center;
+  margin-bottom: 18px;
+  padding: 18px 20px 18px 0;
+  transition: .45s var(--ease);
+}
+
+.trust-flow-item:last-child {
+  margin-bottom: 0;
+}
+
+.trust-flow-node {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  color: var(--green);
+  background: var(--panel);
+  border: 1px solid var(--line-soft);
+  transition: .45s var(--ease);
+}
+
+.trust-flow-node svg {
+  width: 25px;
+  height: 25px;
+}
+
+.trust-flow-card {
+  min-height: 78px;
+  padding: 18px 22px;
+  border: 1px solid var(--line-soft);
+  border-radius: 18px;
+  background: rgba(12, 23, 20, .78);
+  backdrop-filter: blur(10px);
+  transition: .45s var(--ease);
+}
+
+.trust-flow-card b {
+  display: block;
+  font-size: 15.5px;
+  margin-bottom: 4px;
+}
+
+.trust-flow-card span {
+  display: block;
+  color: var(--muted-2);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.trust-flow-check {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--green);
+  background: rgba(0, 181, 131, .12);
+  opacity: 0;
+  transform: scale(.55);
+  transition: .45s var(--ease);
+}
+
+.trust-flow-check svg {
+  width: 15px;
+  height: 15px;
+}
+
+.trust-flow-item.active {
+  transform: translateX(10px);
+}
+
+.trust-flow-item.active .trust-flow-node,
+.trust-flow-item.passed .trust-flow-node {
+  color: #00150e;
+  background: var(--green);
+  border-color: var(--green);
+  box-shadow: 0 0 34px -10px rgba(0, 181, 131, .9);
+}
+
+.trust-flow-item.active .trust-flow-card {
+  border-color: var(--green);
+  background: var(--panel-2, #0f1d18);
+  box-shadow: 0 30px 70px -38px rgba(0, 181, 131, .8);
+}
+
+.trust-flow-item.passed .trust-flow-card {
+  border-color: rgba(0, 181, 131, .4);
+}
+
+.trust-flow-item.active .trust-flow-check,
+.trust-flow-item.passed .trust-flow-check {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@keyframes trustFlowPulse {
+  from {
+    opacity: .75;
+    transform: scale(.7);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(1.8);
+  }
+}
+
+@media (max-width: 980px) {
+  .trust-flow-wrap {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
+  .trust-flow-panel {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 680px) {
+  .trust-flow-wrap {
+    gap: 34px;
+  }
+
+  .trust-flow-tag {
+    font-size: 18px;
+  }
+
+  .trust-flow-copy p {
+    font-size: 14.5px;
+  }
+
+  .trust-flow-line {
+    left: 23px;
+  }
+
+  .trust-flow-pulse {
+    left: 16px;
+  }
+
+  .trust-flow-item {
+    grid-template-columns: 48px 1fr;
+    gap: 14px;
+    padding-right: 0;
+  }
+
+  .trust-flow-node {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+  }
+
+  .trust-flow-node svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .trust-flow-card {
+    padding: 16px 18px;
+  }
+
+  .trust-flow-card b {
+    font-size: 14.5px;
+  }
+
+  .trust-flow-card span {
+    font-size: 12.5px;
+  }
+
+  .trust-flow-check {
+    display: none;
+  }
+
+  .trust-flow-item.active {
+    transform: translateX(4px);
+  }
+}
