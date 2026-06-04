@@ -82,11 +82,22 @@
 .wcell .n{font-size:13px;color:var(--green);font-weight:800;letter-spacing:.1em}
 .wcell h4{font-size:18px;margin:14px 0 10px}
 .wcell p{font-size:14px;color:var(--muted)}
+.stats{background:linear-gradient(120deg,var(--deep-green),#00150e 70%);position:relative;overflow:hidden}
+.stats::before{content:"";position:absolute;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(0,181,131,.3),transparent 65%);filter:blur(60px);top:-160px;right:-80px}
+.stats .wrap{position:relative;z-index:2}
+.stats h2{font-size:clamp(26px,3.4vw,40px)}
+.stats .lead{margin-bottom:54px}
+.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.stat{border-left:2px solid var(--green);padding-left:24px}
+.stat .big{font-size:clamp(40px,5.6vw,64px);font-weight:900;letter-spacing:-.03em;line-height:1}
+.stat .big .green{margin-left:2px}
+.stat .cap{font-size:14px;color:var(--muted);margin-top:12px;max-width:240px}
+.stats .src{font-size:11px;color:var(--muted-2);margin-top:40px}
 .reveal{opacity:0;transform:translateY(28px);transition:.8s var(--ease)}
 .reveal.in{opacity:1;transform:none}
 .reveal.d1{transition-delay:.08s}
 .reveal.d2{transition-delay:.16s}
 .reveal.d3{transition-delay:.24s}
 .reveal.d4{transition-delay:.32s}
-@media(max-width:980px){.hero .wrap{grid-template-columns:1fr}.hero-cards{margin-top:6px}.pillars-grid{grid-template-columns:repeat(2,1fr)}.flow-steps{grid-template-columns:repeat(3,1fr);gap:30px 10px}.flow-line{display:none}.sol-grid{grid-template-columns:1fr}.why-grid{grid-template-columns:1fr}}
+@media(max-width:980px){.hero .wrap{grid-template-columns:1fr}.hero-cards{margin-top:6px}.pillars-grid{grid-template-columns:repeat(2,1fr)}.flow-steps{grid-template-columns:repeat(3,1fr);gap:30px 10px}.flow-line{display:none}.sol-grid{grid-template-columns:1fr}.why-grid{grid-template-columns:1fr}.stat-grid{grid-template-columns:1fr;gap:34px}}
 @media(max-width:680px){.hero{padding-top:120px}.hero h1 br{display:none}.ac-stats{gap:12px}.scroll-hint{display:none}.trust-row{justify-content:flex-start}.trust .label{text-align:left}.section{padding:84px 0}.pillars-grid{grid-template-columns:1fr}.flow-steps{grid-template-columns:1fr;gap:22px}}
