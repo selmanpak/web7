@@ -1,4 +1,6 @@
-#why .cf{position:relative;overflow:hidden;padding:20px 0;margin-top:60px}
+#why .head{text-align:center;margin-bottom:40px}
+#why .head .eyebrow{justify-content:center}
+#why .cf{position:relative;overflow:hidden;padding:20px 0;margin-top:40px}
 #why .cftrack{display:flex;gap:24px;transition:transform .6s var(--ease);will-change:transform}
 #why .cfc{width:340px;flex:0 0 auto;border:1px solid var(--line-soft);border-radius:20px;background:var(--panel,#0c1714);padding:38px 32px;transition:.5s var(--ease);opacity:.4;transform:scale(.88);cursor:pointer}
 #why .cfc.on{opacity:1;transform:scale(1);border-color:var(--green);box-shadow:0 30px 70px -30px rgba(0,181,131,.5)}
@@ -7,4 +9,11 @@
 #why .cfc .ic svg{width:25px;height:25px}
 #why .cfc h3{font-size:20px;margin-bottom:10px}
 #why .cfc p{font-size:14.5px;color:var(--muted)}
-@media(max-width:680px){#why .cf{margin-top:42px;overflow:visible}#why .cftrack{gap:16px}#why .cfc{width:calc(100vw - 64px);padding:30px 26px}}
+#why .cfctl{display:flex;align-items:center;justify-content:center;gap:24px;margin-top:36px}
+#why .arw{width:48px;height:48px;border-radius:50%;border:1px solid var(--line);background:var(--panel,#0c1714);color:var(--green);display:grid;place-items:center;cursor:pointer;transition:.3s}
+#why .arw:hover{background:var(--green);color:#00150e}
+#why .arw svg{width:20px;height:20px}
+#why .dots{display:flex;gap:9px}
+#why .dot{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.18);cursor:pointer;transition:.3s}
+#why .dot.on{background:var(--green);width:26px;border-radius:6px}
+@media(max-width:680px){#why .cf{margin-top:32px;overflow:hidden}#why .cftrack{gap:16px}#why .cfc{width:calc(100vw - 64px);padding:30px 26px}#why .cfctl{gap:18px;margin-top:28px}}
