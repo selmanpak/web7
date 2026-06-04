@@ -1,0 +1,9 @@
+@media(max-width:680px){
+  .hero .rvis{
+    width:calc(100% - 20px);
+    max-width:calc(100% - 20px);
+    margin-left:10px;
+    margin-right:10px;
+    box-sizing:border-box;
+  }
+}
