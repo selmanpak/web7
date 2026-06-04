@@ -1,3 +1,4 @@
+#solutions{background:var(--bg-soft);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
 #solutions #cAcc{margin-top:60px}
 #solutions .acc{border:1px solid var(--line-soft);border-radius:16px;overflow:hidden;margin-bottom:12px;background:var(--panel,#0c1714);transition:.4s var(--ease)}
 #solutions .acc.open{border-color:var(--green)}
