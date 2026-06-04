@@ -1,14 +1,20 @@
 function initRevealAnimations() {
   const revealItems = document.querySelectorAll('.reveal');
 
-  if (!revealItems.length) return;
+  if (!revealItems.length) {
+    document.body.classList.add('reveal-ready');
+    return;
+  }
 
   revealItems.forEach((item) => item.classList.remove('in'));
 
+  const revealFallback = () => {
+    document.body.classList.add('reveal-ready');
+    revealItems.forEach((item) => item.classList.add('in'));
+  };
+
   if (!('IntersectionObserver' in window)) {
-    requestAnimationFrame(() => {
-      revealItems.forEach((item) => item.classList.add('in'));
-    });
+    requestAnimationFrame(revealFallback);
     return;
   }
 
@@ -30,6 +36,7 @@ function initRevealAnimations() {
   requestAnimationFrame(() => {
     requestAnimationFrame(() => {
       revealItems.forEach((item) => observer.observe(item));
+      document.body.classList.add('reveal-ready');
     });
   });
 }
