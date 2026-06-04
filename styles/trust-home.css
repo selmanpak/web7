@@ -5,13 +5,14 @@
 .trust-flow-actions{margin-top:30px}
 .trust-flow-panel{position:relative}
 
-#trust-compliance .chain,#trust-compliance .trust-flow-chain{position:relative;padding-left:6px}
+#trust-compliance .chain,#trust-compliance .trust-flow-chain{position:relative;padding-left:6px;isolation:isolate}
 #trust-compliance .links{display:flex;flex-direction:column;gap:16px;position:relative;z-index:2}
 #trust-compliance .trust-flow-chain{display:flex;flex-direction:column;gap:16px;z-index:2}
-#trust-compliance .cline,#trust-compliance .trust-flow-line{position:absolute;left:28px;top:22px;bottom:22px;width:2px;background:var(--line-soft);z-index:1}
-#trust-compliance .ctoken,#trust-compliance .trust-flow-pulse{position:absolute;left:21px;top:0;width:16px;height:16px;border-radius:50%;background:var(--green-bright,var(--green));box-shadow:0 0 18px 3px rgba(22,227,166,.7);transition:top .9s var(--ease);z-index:3}
+#trust-compliance .cline,#trust-compliance .trust-flow-line{position:absolute;left:28px;top:22px;bottom:22px;width:2px;background:var(--line-soft);z-index:0;pointer-events:none}
+#trust-compliance .ctoken,#trust-compliance .trust-flow-pulse{position:absolute;left:21px;top:0;width:16px;height:16px;border-radius:50%;background:var(--green-bright,var(--green));box-shadow:0 0 18px 3px rgba(22,227,166,.7);transition:top .9s var(--ease);z-index:3;pointer-events:none}
 
-#trust-compliance .lk,#trust-compliance .trust-flow-item{display:flex;align-items:center;gap:15px;padding:16px 20px;border:1px solid var(--line-soft);border-radius:14px;background:var(--panel);position:relative;transition:.4s var(--ease);z-index:2}
+#trust-compliance .lk,#trust-compliance .trust-flow-item{display:flex;align-items:center;gap:15px;padding:16px 20px;border:1px solid var(--line-soft);border-radius:14px;background:var(--panel,#0c1714);position:relative;transition:.4s var(--ease);z-index:2;background-clip:padding-box}
+#trust-compliance .lk::before,#trust-compliance .trust-flow-item::before{content:"";position:absolute;inset:0;border-radius:inherit;background:var(--panel,#0c1714);z-index:-1}
 #trust-compliance .lk .ic,#trust-compliance .trust-flow-node{width:44px;height:44px;border-radius:11px;background:rgba(0,181,131,.12);color:var(--green);display:grid;place-items:center;flex:0 0 auto;transition:.4s}
 #trust-compliance .lk .ic svg,#trust-compliance .trust-flow-node svg{width:21px;height:21px}
 #trust-compliance .lk b,#trust-compliance .trust-flow-card b{display:block;font-size:14.5px;color:#fff}
