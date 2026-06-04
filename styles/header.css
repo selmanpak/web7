@@ -21,10 +21,6 @@ header.scrolled{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  max-width:none;
-  width:100%;
-  padding-left:70px;
-  padding-right:70px;
 }
 .nav-links{display:flex;align-items:center;gap:38px;list-style:none}
 .nav-links a{font-size:14px;font-weight:500;color:var(--muted);transition:.25s;position:relative}
@@ -35,7 +31,6 @@ header.scrolled{
 .menu-btn{display:none;background:none;border:none;color:#fff;cursor:pointer;flex-direction:column;gap:5px}
 .menu-btn span{width:24px;height:2px;background:#fff;border-radius:2px;transition:.3s}
 @media(max-width:680px){
-  .nav{padding-left:20px;padding-right:20px}
   .nav-links,.nav-cta .btn{display:none}
   .menu-btn{display:flex}
   .nav-links.open{
