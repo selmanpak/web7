@@ -1,0 +1,54 @@
+.logo{display:flex;align-items:center}
+.fdlogo{height:25px;width:auto;display:block;transition:.3s}
+header.scrolled .fdlogo{height:23px}
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:100;
+  padding:20px 0;
+  transition:.4s var(--ease);
+  border-bottom:1px solid transparent;
+}
+header.scrolled{
+  background:rgba(5,8,7,.82);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line-soft);
+  padding:13px 0;
+}
+.nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  max-width:none;
+  width:100%;
+  padding-left:70px;
+  padding-right:70px;
+}
+.nav-links{display:flex;align-items:center;gap:38px;list-style:none}
+.nav-links a{font-size:14px;font-weight:500;color:var(--muted);transition:.25s;position:relative}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--green);transition:.3s var(--ease)}
+.nav-links a:hover{color:#fff}
+.nav-links a:hover::after{width:100%}
+.nav-cta{display:flex;align-items:center;gap:18px}
+.menu-btn{display:none;background:none;border:none;color:#fff;cursor:pointer;flex-direction:column;gap:5px}
+.menu-btn span{width:24px;height:2px;background:#fff;border-radius:2px;transition:.3s}
+@media(max-width:680px){
+  .nav{padding-left:20px;padding-right:20px}
+  .nav-links,.nav-cta .btn{display:none}
+  .menu-btn{display:flex}
+  .nav-links.open{
+    display:flex;
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    flex-direction:column;
+    background:rgba(5,8,7,.97);
+    backdrop-filter:blur(14px);
+    padding:24px 28px;
+    gap:22px;
+    border-bottom:1px solid var(--line-soft);
+  }
+}
