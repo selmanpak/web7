@@ -83,7 +83,7 @@
 .wcell h4{font-size:18px;margin:14px 0 10px}
 .wcell p{font-size:14px;color:var(--muted)}
 .reveal{opacity:0;transform:translateY(28px);transition:.8s var(--ease)}
-body.reveal-ready .reveal.in{opacity:1;transform:none}
+.reveal.in{opacity:1;transform:none}
 .reveal.d1{transition-delay:.08s}
 .reveal.d2{transition-delay:.16s}
 .reveal.d3{transition-delay:.24s}
