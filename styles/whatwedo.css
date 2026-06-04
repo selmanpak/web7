@@ -1,0 +1,26 @@
+#about .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;margin-top:60px}
+#about .feature{position:relative;border:1px solid var(--line);border-radius:24px;background:linear-gradient(150deg,#0c1f18,#081411);padding:44px;min-height:340px;overflow:hidden}
+#about .feature .fnum{position:absolute;top:24px;right:34px;font-size:120px;font-weight:900;color:rgba(0,181,131,.10);line-height:1}
+#about .fic{width:64px;height:64px;border-radius:16px;background:rgba(0,181,131,.16);display:grid;place-items:center;color:var(--green);margin-bottom:24px;animation:wwdBob 5s ease-in-out infinite}
+#about .fic svg{width:30px;height:30px}
+#about .feature h3{font-size:30px;margin-bottom:14px}
+#about .feature p{font-size:16px;color:var(--muted);max-width:440px}
+#about .fbar{position:absolute;left:0;bottom:0;height:4px;background:var(--green);width:0}
+#about .fbar.run{animation:wwdProg 5s linear forwards}
+#about .list{display:flex;flex-direction:column;gap:8px}
+#about .li{display:flex;align-items:center;gap:16px;padding:18px 20px;border-radius:14px;border:1px solid transparent;cursor:pointer;transition:.3s}
+#about .li:hover{background:var(--panel,#0c1714)}
+#about .li.on{background:var(--panel,#0c1714);border-color:var(--line)}
+#about .li .ln{font-size:14px;font-weight:800;color:var(--muted-2);width:26px}
+#about .li.on .ln{color:var(--green)}
+#about .li .ic{width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,.05);display:grid;place-items:center;color:var(--muted);transition:.3s;flex:0 0 auto}
+#about .li.on .ic{background:rgba(0,181,131,.16);color:var(--green)}
+#about .li .ic svg{width:19px;height:19px}
+#about .li b{font-size:16px;color:var(--muted)}
+#about .li.on b{color:#fff}
+.anim{opacity:0;transform:translateY(28px);transition:.8s var(--ease)}
+.anim.in{opacity:1;transform:none}
+.anim.d1{transition-delay:.08s}.anim.d2{transition-delay:.16s}.anim.d3{transition-delay:.24s}.anim.d4{transition-delay:.32s}
+@keyframes wwdBob{0%,100%{transform:translateY(-4px)}50%{transform:translateY(4px)}}
+@keyframes wwdProg{from{width:0}to{width:100%}}
+@media(max-width:760px){#about .grid{grid-template-columns:1fr;gap:28px;margin-top:42px}#about .feature{min-height:280px;padding:30px}#about .feature .fnum{font-size:88px;right:22px;top:20px}#about .li{padding:16px 18px}}
