@@ -1,0 +1,10 @@
+#why .cf{position:relative;overflow:hidden;padding:20px 0;margin-top:60px}
+#why .cftrack{display:flex;gap:24px;transition:transform .6s var(--ease);will-change:transform}
+#why .cfc{width:340px;flex:0 0 auto;border:1px solid var(--line-soft);border-radius:20px;background:var(--panel,#0c1714);padding:38px 32px;transition:.5s var(--ease);opacity:.4;transform:scale(.88);cursor:pointer}
+#why .cfc.on{opacity:1;transform:scale(1);border-color:var(--green);box-shadow:0 30px 70px -30px rgba(0,181,131,.5)}
+#why .cfc .num{font-size:30px;font-weight:900;color:rgba(0,181,131,.35)}
+#why .cfc .ic{width:52px;height:52px;border-radius:13px;background:rgba(0,181,131,.13);display:grid;place-items:center;color:var(--green);margin:16px 0}
+#why .cfc .ic svg{width:25px;height:25px}
+#why .cfc h3{font-size:20px;margin-bottom:10px}
+#why .cfc p{font-size:14.5px;color:var(--muted)}
+@media(max-width:680px){#why .cf{margin-top:42px;overflow:visible}#why .cftrack{gap:16px}#why .cfc{width:calc(100vw - 64px);padding:30px 26px}}
