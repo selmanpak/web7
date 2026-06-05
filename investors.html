@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>For Investors — FirstData</title>
 <meta name="description" content="Access premium real-world assets fractionally through FirstData — with transparent ownership and built-in investor protection.">
-<link rel="canonical" href="https://selmanpak.github.io/web7/investors.html">
+<link rel="canonical" href="https://selmanpak.github.io/investors.html">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="author" content="FirstData Group">
 <meta name="theme-color" content="#050807">
@@ -14,15 +14,15 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="For Investors — FirstData">
 <meta property="og:description" content="Access premium real-world assets fractionally through FirstData — with transparent ownership and built-in investor protection.">
-<meta property="og:url" content="https://selmanpak.github.io/web7/investors.html">
-<meta property="og:image" content="https://selmanpak.github.io/web7/assets/og-image.png">
+<meta property="og:url" content="https://selmanpak.github.io/investors.html">
+<meta property="og:image" content="https://selmanpak.github.io/assets/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="FirstData — the future of asset ownership, tokenized">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="For Investors — FirstData">
 <meta name="twitter:description" content="Access premium real-world assets fractionally through FirstData — with transparent ownership and built-in investor protection.">
-<meta name="twitter:image" content="https://selmanpak.github.io/web7/assets/og-image.png">
+<meta name="twitter:image" content="https://selmanpak.github.io/assets/og-image.png">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="assets/favicon-16.png" sizes="16x16" type="image/png">
@@ -102,8 +102,8 @@
         <h2 class="reveal d1">Register your<br>interest today.</h2>
         <p class="reveal d2">Tell us what you're looking for, and we'll keep you informed about upcoming opportunities.</p>
         <div class="reveal d3" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
-          <a href="/web7/contact.html" class="btn btn-primary">Talk to us<span class="circ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
-          <a href="/web7/solutions.html" class="btn btn-ghost">Explore solutions<span class="circ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
+          <a href="/contact.html" class="btn btn-primary">Talk to us<span class="circ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
+          <a href="/solutions.html" class="btn btn-ghost">Explore solutions<span class="circ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
         </div>
       </div>
     </section>
@@ -112,8 +112,8 @@
   <div id="global-footer"></div>
 
   <script>
-    async function loadGlobalHeader(){const container=document.getElementById('global-header');const response=await fetch('/web7/components/header.html');container.innerHTML=await response.text();const hdr=document.getElementById('hdr');const setHeaderState=()=>hdr.classList.toggle('scrolled',scrollY>30);setHeaderState();addEventListener('scroll',setHeaderState);const mb=document.getElementById('menuBtn'),nl=document.getElementById('navlinks');const solutionsLink=document.querySelector('#navlinks a[href="/web7/solutions.html"]');solutionsLink&&solutionsLink.classList.add('active');mb&&mb.addEventListener('click',()=>nl.classList.toggle('open'));nl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nl.classList.remove('open')))}
-    async function loadGlobalFooter(){const container=document.getElementById('global-footer');const response=await fetch('/web7/components/footer.html');container.innerHTML=await response.text()}
+    async function loadGlobalHeader(){const container=document.getElementById('global-header');const response=await fetch('/components/header.html');container.innerHTML=await response.text();const hdr=document.getElementById('hdr');const setHeaderState=()=>hdr.classList.toggle('scrolled',scrollY>30);setHeaderState();addEventListener('scroll',setHeaderState);const mb=document.getElementById('menuBtn'),nl=document.getElementById('navlinks');const solutionsLink=document.querySelector('#navlinks a[href="/solutions.html"]');solutionsLink&&solutionsLink.classList.add('active');mb&&mb.addEventListener('click',()=>nl.classList.toggle('open'));nl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nl.classList.remove('open')))}
+    async function loadGlobalFooter(){const container=document.getElementById('global-footer');const response=await fetch('/components/footer.html');container.innerHTML=await response.text()}
     loadGlobalHeader();loadGlobalFooter();
     const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   </script>

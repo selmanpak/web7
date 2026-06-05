@@ -64,12 +64,48 @@ footer .fdlogo{
   display:flex;
   gap:10px;
 }
-.f-contact svg{
+.contact-icon{
   width:17px;
   height:17px;
   color:var(--green);
   flex:0 0 auto;
   margin-top:3px;
+  position:relative;
+  display:inline-block;
+}
+.contact-icon::before,
+.contact-icon::after{
+  content:"";
+  position:absolute;
+  box-sizing:border-box;
+}
+.contact-icon-location::before{
+  width:14px;
+  height:14px;
+  left:1px;
+  top:0;
+  border:2px solid currentColor;
+  border-radius:50% 50% 50% 0;
+  transform:rotate(-45deg);
+}
+.contact-icon-location::after{
+  width:4px;
+  height:4px;
+  left:6px;
+  top:5px;
+  background:currentColor;
+  border-radius:50%;
+}
+.contact-icon-mail,
+.contact-icon-phone{
+  display:grid;
+  place-items:center;
+  font-size:15px;
+  line-height:1;
+  font-weight:800;
+}
+.contact-icon-phone{
+  font-size:14px;
 }
 .f-bottom{
   display:flex;

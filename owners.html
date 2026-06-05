@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>For Asset Owners — FirstData</title>
 <meta name="description" content="Raise capital from real estate, energy and debt assets without selling them — through compliant, fractional tokenization with FirstData.">
-<link rel="canonical" href="https://selmanpak.github.io/web7/owners.html">
+<link rel="canonical" href="https://selmanpak.github.io/owners.html">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="author" content="FirstData Group">
 <meta name="theme-color" content="#050807">
@@ -14,15 +14,15 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="For Asset Owners — FirstData">
 <meta property="og:description" content="Raise capital from real estate, energy and debt assets without selling them — through compliant, fractional tokenization with FirstData.">
-<meta property="og:url" content="https://selmanpak.github.io/web7/owners.html">
-<meta property="og:image" content="https://selmanpak.github.io/web7/assets/og-image.png">
+<meta property="og:url" content="https://selmanpak.github.io/owners.html">
+<meta property="og:image" content="https://selmanpak.github.io/assets/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="FirstData — the future of asset ownership, tokenized">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="For Asset Owners — FirstData">
 <meta name="twitter:description" content="Raise capital from real estate, energy and debt assets without selling them — through compliant, fractional tokenization with FirstData.">
-<meta name="twitter:image" content="https://selmanpak.github.io/web7/assets/og-image.png">
+<meta name="twitter:image" content="https://selmanpak.github.io/assets/og-image.png">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="assets/favicon-16.png" sizes="16x16" type="image/png">
@@ -61,7 +61,7 @@
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"></path></svg>Reach a wider local and global investor base</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"></path></svg>Compliance, structuring and reporting handled end to end</li>
           </ul>
-          <a href="/web7/contact.html" class="btn btn-primary">Tokenize your assets<span class="circ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
+          <a href="/contact.html" class="btn btn-primary">Tokenize your assets<span class="circ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
         </div>
         <div class="vpanel reveal d1">
           <div class="vp-head"><span class="t">Asset → Fractional tokens</span><span class="badge">Illustrative</span></div>
@@ -105,8 +105,8 @@
         <h2 class="reveal d1">Turn your assets<br>into liquidity.</h2>
         <p class="reveal d2">Talk to our team about bringing your real-world assets onto the platform.</p>
         <div class="reveal d3" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
-          <a href="/web7/contact.html" class="btn btn-primary">Talk to us<span class="circ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
-          <a href="/web7/platform.html" class="btn btn-ghost">See the platform<span class="circ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
+          <a href="/contact.html" class="btn btn-primary">Talk to us<span class="circ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
+          <a href="/platform.html" class="btn btn-ghost">See the platform<span class="circ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
         </div>
       </div>
     </section>
@@ -117,20 +117,20 @@
   <script>
     async function loadGlobalHeader(){
       const container=document.getElementById('global-header');
-      const response=await fetch('/web7/components/header.html');
+      const response=await fetch('/components/header.html');
       container.innerHTML=await response.text();
       const hdr=document.getElementById('hdr');
       const setHeaderState=()=>hdr.classList.toggle('scrolled',scrollY>30);
       setHeaderState();addEventListener('scroll',setHeaderState);
       const mb=document.getElementById('menuBtn'),nl=document.getElementById('navlinks');
-      const solutionsLink=document.querySelector('#navlinks a[href="/web7/solutions.html"]');
+      const solutionsLink=document.querySelector('#navlinks a[href="/solutions.html"]');
       solutionsLink&&solutionsLink.classList.add('active');
       mb&&mb.addEventListener('click',()=>nl.classList.toggle('open'));
       nl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nl.classList.remove('open')));
     }
     async function loadGlobalFooter(){
       const container=document.getElementById('global-footer');
-      const response=await fetch('/web7/components/footer.html');
+      const response=await fetch('/components/footer.html');
       container.innerHTML=await response.text();
     }
     loadGlobalHeader();loadGlobalFooter();

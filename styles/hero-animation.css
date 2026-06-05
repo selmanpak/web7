@@ -1,0 +1,262 @@
+.hero-fraction{
+  min-height:520px;
+  overflow:visible;
+}
+.hero-fraction .scene{
+  container-type:size;
+  position:relative;
+  width:100%;
+  max-width:500px;
+  aspect-ratio:1/1;
+  margin:0 auto;
+  overflow:visible;
+}
+.hero-fraction .sglow{
+  position:absolute;
+  top:46%;
+  left:50%;
+  width:46%;
+  height:46%;
+  transform:translate(-50%,-50%);
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(0,181,131,.4),transparent 65%);
+  filter:blur(26px);
+  transition:.6s var(--ease);
+}
+.hero-fraction .scene.distribute .sglow{opacity:.5}
+.hero-fraction .wires{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  width:100%;
+  height:100%;
+  overflow:visible;
+}
+.hero-fraction .wire{
+  stroke:var(--green);
+  stroke-width:.5;
+  opacity:0;
+  transition:stroke-dashoffset 1s var(--ease),opacity .5s;
+}
+.hero-fraction .scene.distribute .wire{opacity:.6}
+.hero-fraction .building{
+  position:absolute;
+  top:46%;
+  left:50%;
+  z-index:4;
+  width:42%;
+  padding:5cqmin 5cqmin 4.4cqmin;
+  background:rgba(10,28,22,.92);
+  border:1px solid var(--line);
+  border-radius:4cqmin;
+  box-shadow:0 8cqmin 16cqmin -6cqmin rgba(0,0,0,.7);
+  backdrop-filter:blur(6px);
+  transform:translate(-50%,-50%);
+  transition:.6s var(--ease);
+}
+.hero-fraction .scene.split .building,
+.hero-fraction .scene.distribute .building{
+  transform:translate(-50%,-50%) scale(.82);
+  opacity:.9;
+}
+.hero-fraction .building .bic{
+  display:grid;
+  place-items:center;
+  width:13cqmin;
+  height:13cqmin;
+  margin-bottom:3cqmin;
+  color:var(--green);
+  background:rgba(0,181,131,.16);
+  border-radius:3cqmin;
+}
+.hero-fraction .building .bic svg{
+  width:7cqmin;
+  height:7cqmin;
+}
+.hero-fraction .building b{
+  display:block;
+  font-size:3.6cqmin;
+  line-height:1.2;
+}
+.hero-fraction .building span{
+  color:var(--muted);
+  font-size:3.1cqmin;
+  font-weight:600;
+}
+.hero-fraction .building .bbadge{
+  position:absolute;
+  top:3.5cqmin;
+  right:3.5cqmin;
+  padding:1cqmin 2.4cqmin;
+  color:var(--green);
+  background:rgba(0,181,131,.14);
+  border-radius:6cqmin;
+  font-size:2.5cqmin;
+  font-weight:700;
+  letter-spacing:.1em;
+  line-height:1.2;
+  text-transform:uppercase;
+}
+.hero-fraction .tok{
+  position:absolute;
+  z-index:3;
+  display:grid;
+  place-items:center;
+  width:7.5%;
+  aspect-ratio:1;
+  background:var(--green);
+  border-radius:1.6cqmin;
+  box-shadow:0 0 3cqmin rgba(0,181,131,.55);
+  opacity:0;
+  transform:translate(-50%,-50%) scale(.2);
+}
+.hero-fraction .tok::after{
+  content:"";
+  width:38%;
+  height:38%;
+  border:1.2px solid rgba(0,21,14,.5);
+  border-radius:50%;
+}
+.hero-fraction .tok.alt{
+  background:rgba(0,181,131,.45);
+  box-shadow:0 0 2cqmin rgba(0,181,131,.3);
+}
+.hero-fraction .trader{
+  position:absolute;
+  z-index:5;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:1.4cqmin;
+  transform:translate(-50%,-50%);
+  transition:.4s var(--ease);
+}
+.hero-fraction .trader .av{
+  position:relative;
+  display:grid;
+  place-items:center;
+  width:13cqmin;
+  height:13cqmin;
+  color:var(--muted-2);
+  background:var(--panel,#0c1714);
+  border:1px solid var(--line);
+  border-radius:50%;
+  transition:.4s var(--ease);
+}
+.hero-fraction .trader .av svg{
+  width:6.4cqmin;
+  height:6.4cqmin;
+}
+.hero-fraction .trader.lit .av{
+  color:var(--green);
+  background:var(--panel,#0c1714);
+  border-color:var(--green);
+  box-shadow:0 0 5cqmin -1cqmin var(--green);
+}
+.hero-fraction .trader .badge{
+  position:absolute;
+  top:-1.6cqmin;
+  right:-1.6cqmin;
+  display:grid;
+  place-items:center;
+  min-width:5cqmin;
+  height:5cqmin;
+  padding:0 1.2cqmin;
+  color:#00150e;
+  background:var(--green);
+  border-radius:5cqmin;
+  font-size:2.8cqmin;
+  font-weight:800;
+  line-height:1;
+  transform:scale(0);
+  transition:transform .35s var(--ease);
+}
+.hero-fraction .trader.lit .badge{transform:scale(1)}
+.hero-fraction .trader .tlabel{
+  color:var(--muted-2);
+  font-size:2.6cqmin;
+  font-weight:600;
+  line-height:1;
+  white-space:nowrap;
+  opacity:0;
+  transition:.4s;
+}
+.hero-fraction .trader.lit .tlabel{
+  color:var(--muted);
+  opacity:1;
+}
+.hero-fraction .caption{
+  position:absolute;
+  bottom:-9%;
+  left:50%;
+  z-index:6;
+  display:flex;
+  align-items:center;
+  gap:3cqmin;
+  padding:2.4cqmin 4cqmin;
+  background:rgba(0,0,0,.5);
+  border:1px solid var(--line-soft);
+  border-radius:8cqmin;
+  backdrop-filter:blur(8px);
+  transform:translateX(-50%);
+  white-space:nowrap;
+}
+.hero-fraction .caption .ct{
+  color:#fff;
+  font-size:3.1cqmin;
+  font-weight:600;
+  line-height:1;
+  transition:.3s;
+}
+.hero-fraction .caption .dots{
+  display:flex;
+  gap:1.4cqmin;
+}
+.hero-fraction .caption .dots i{
+  width:1.8cqmin;
+  height:1.8cqmin;
+  background:rgba(255,255,255,.22);
+  border-radius:50%;
+  transition:.3s;
+}
+.hero-fraction .caption .dots i.on{
+  width:5cqmin;
+  background:var(--green);
+  border-radius:1cqmin;
+}
+@media(max-width:980px){
+  .hero-fraction{
+    display:grid;
+    min-height:440px;
+  }
+  .hero-fraction .scene{
+    max-width:390px;
+  }
+}
+@media(max-width:680px){
+  .hero-fraction{
+    width:100vw;
+    max-width:none;
+    min-height:430px;
+    margin:8px calc(50% - 50vw) 20px;
+  }
+  .hero-fraction .scene{
+    max-width:min(430px,100vw);
+  }
+  .hero-fraction .caption{
+    bottom:-12%;
+  }
+}
+@media(max-width:380px){
+  .hero-fraction{
+    min-height:360px;
+  }
+}
+.rvis.hero-fraction{margin:0}
+@media(max-width:680px){
+  .rvis.hero-fraction{
+    width:100vw;
+    max-width:none;
+    margin:8px calc(50% - 50vw) 20px;
+  }
+}
