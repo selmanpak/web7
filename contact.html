@@ -93,7 +93,7 @@
   <script>
     async function loadGlobalHeader(){
       const container=document.getElementById('global-header');
-      const response=await fetch('/components/header.html');
+      const response=await fetch('components/header.html');
       container.innerHTML=await response.text();
       const hdr=document.getElementById('hdr');
       const setHeaderState=()=>hdr.classList.toggle('scrolled',scrollY>30);
@@ -104,7 +104,7 @@
     }
     async function loadGlobalFooter(){
       const container=document.getElementById('global-footer');
-      const response=await fetch('/components/footer.html');
+      const response=await fetch('components/footer.html');
       container.innerHTML=await response.text();
     }
     loadGlobalHeader();loadGlobalFooter();

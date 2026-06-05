@@ -61,7 +61,7 @@
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"></path></svg>Reach a wider local and global investor base</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"></path></svg>Compliance, structuring and reporting handled end to end</li>
           </ul>
-          <a href="/contact.html" class="btn btn-primary">Tokenize your assets<span class="circ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
+          <a href="contact.html" class="btn btn-primary">Tokenize your assets<span class="circ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
         </div>
         <div class="vpanel reveal d1">
           <div class="vp-head"><span class="t">Asset → Fractional tokens</span><span class="badge">Illustrative</span></div>
@@ -105,8 +105,8 @@
         <h2 class="reveal d1">Turn your assets<br>into liquidity.</h2>
         <p class="reveal d2">Talk to our team about bringing your real-world assets onto the platform.</p>
         <div class="reveal d3" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
-          <a href="/contact.html" class="btn btn-primary">Talk to us<span class="circ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
-          <a href="/platform.html" class="btn btn-ghost">See the platform<span class="circ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
+          <a href="contact.html" class="btn btn-primary">Talk to us<span class="circ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
+          <a href="platform.html" class="btn btn-ghost">See the platform<span class="circ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
         </div>
       </div>
     </section>
@@ -117,20 +117,20 @@
   <script>
     async function loadGlobalHeader(){
       const container=document.getElementById('global-header');
-      const response=await fetch('/components/header.html');
+      const response=await fetch('components/header.html');
       container.innerHTML=await response.text();
       const hdr=document.getElementById('hdr');
       const setHeaderState=()=>hdr.classList.toggle('scrolled',scrollY>30);
       setHeaderState();addEventListener('scroll',setHeaderState);
       const mb=document.getElementById('menuBtn'),nl=document.getElementById('navlinks');
-      const solutionsLink=document.querySelector('#navlinks a[href="/solutions.html"]');
+      const solutionsLink=document.querySelector('#navlinks a[href="solutions.html"]');
       solutionsLink&&solutionsLink.classList.add('active');
       mb&&mb.addEventListener('click',()=>nl.classList.toggle('open'));
       nl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nl.classList.remove('open')));
     }
     async function loadGlobalFooter(){
       const container=document.getElementById('global-footer');
-      const response=await fetch('/components/footer.html');
+      const response=await fetch('components/footer.html');
       container.innerHTML=await response.text();
     }
     loadGlobalHeader();loadGlobalFooter();

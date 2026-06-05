@@ -47,8 +47,8 @@
         <h1 class="reveal d1">This page couldn’t be found.</h1>
         <p class="lead reveal d2">The page you’re looking for may have moved or no longer exists. Let’s get you back on track.</p>
         <div class="error-actions reveal d3">
-          <a href="/index.html" class="btn btn-primary">Back to home<span class="circ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
-          <a href="/platform.html" class="btn btn-ghost">Explore the platform<span class="circ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
+          <a href="index.html" class="btn btn-primary">Back to home<span class="circ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
+          <a href="platform.html" class="btn btn-ghost">Explore the platform<span class="circ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
         </div>
       </div>
     </section>
@@ -59,7 +59,7 @@
   <script>
     async function loadGlobalHeader(){
       const container=document.getElementById('global-header');
-      const response=await fetch('/components/header.html');
+      const response=await fetch('components/header.html');
       container.innerHTML=await response.text();
       const hdr=document.getElementById('hdr');
       const setHeaderState=()=>hdr.classList.toggle('scrolled',scrollY>30);
@@ -70,7 +70,7 @@
     }
     async function loadGlobalFooter(){
       const container=document.getElementById('global-footer');
-      const response=await fetch('/components/footer.html');
+      const response=await fetch('components/footer.html');
       container.innerHTML=await response.text();
     }
     loadGlobalHeader();loadGlobalFooter();
