@@ -245,6 +245,21 @@
   }
   .hero-fraction .caption{
     bottom:-12%;
+    gap:3.9cqmin;
+    padding:3.1cqmin 5.2cqmin;
+  }
+  .hero-fraction .caption .ct{
+    font-size:4cqmin;
+  }
+  .hero-fraction .caption .dots{
+    gap:1.8cqmin;
+  }
+  .hero-fraction .caption .dots i{
+    width:2.3cqmin;
+    height:2.3cqmin;
+  }
+  .hero-fraction .caption .dots i.on{
+    width:6.5cqmin;
   }
 }
 @media(max-width:380px){
