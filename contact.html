@@ -108,10 +108,18 @@
       container.innerHTML=await response.text();
     }
     loadGlobalHeader();loadGlobalFooter();
+    ['cf-name','cf-org','cf-email','cf-role','cf-msg'].forEach(id=>{const el=document.getElementById(id);if(el)el.addEventListener('input',()=>el.classList.remove('field-error'));});
     const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
     document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
     async function fdSend(){
       const v=id=>(document.getElementById(id)||{}).value||'';
+      const required=['cf-name','cf-org','cf-email','cf-role','cf-msg'];
+      const invalid=required.filter(id=>!v(id).trim());
+      if(invalid.length){
+        invalid.forEach(id=>{const el=document.getElementById(id);if(el)el.classList.add('field-error');});
+        return;
+      }
+      required.forEach(id=>{const el=document.getElementById(id);if(el)el.classList.remove('field-error');});
       const data={
         access_key:'3caf53b8-43a1-4a1e-a178-c7247416e151',
         subject:'Website enquiry — '+(v('cf-role')||'General'),
