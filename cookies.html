@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cookie Notice — FirstData</title>
+<meta name="description" content="FirstData's Cookie Notice — what cookies this website uses and how to manage them.">
+<link rel="canonical" href="https://1stdata.to/cookies.html">
+<meta name="robots" content="index, follow">
+<meta name="author" content="FirstData Group">
+<meta name="theme-color" content="#050807">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FirstData">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Cookie Notice — FirstData">
+<meta property="og:description" content="FirstData's Cookie Notice — what cookies this website uses and how to manage them.">
+<meta property="og:url" content="https://1stdata.to/cookies.html">
+<meta property="og:image" content="https://1stdata.to/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="FirstData — the future of asset ownership, tokenized">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cookie Notice — FirstData">
+<meta name="twitter:description" content="FirstData's Cookie Notice — what cookies this website uses and how to manage them.">
+<meta name="twitter:image" content="https://1stdata.to/assets/og-image.png">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="assets/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/global.css">
+<link rel="stylesheet" href="styles/header.css">
+<link rel="stylesheet" href="styles/legal.css">
+<link rel="stylesheet" href="styles/footer.css">
+</head>
+<body>
+  <div id="global-header"></div>
+
+  <main>
+    <section class="legal-hero">
+      <div class="glow"></div>
+      <div class="wrap">
+        <span class="eyebrow">Legal</span>
+        <h1>Cookie Notice</h1>
+        <p class="meta">Last updated: 10 June 2026</p>
+      </div>
+    </section>
+
+    <section class="legal-body">
+      <div class="wrap">
+
+        <div class="legal-notice">
+          <p>This notice explains what cookies and similar technologies are used on <strong>1stdata.to</strong> and what choices you have. We keep our use of cookies minimal by design.</p>
+        </div>
+
+        <div class="legal-section">
+          <h2>1. What are cookies?</h2>
+          <p>Cookies are small text files placed on your device by a website when you visit it. They are widely used to make websites work efficiently and to provide information to site owners. Similar technologies include browser local storage and session storage.</p>
+        </div>
+
+        <div class="legal-section">
+          <h2>2. What cookies does this website use?</h2>
+          <h3>Strictly necessary</h3>
+          <p>This website does not set any first-party cookies of its own. No login sessions, preferences or tracking identifiers are stored by FirstData on your device.</p>
+          <h3>Third-party requests</h3>
+          <p>When you visit this website, your browser makes requests to the following third-party services, which may set their own cookies or store data:</p>
+          <ul>
+            <li><strong>Google Fonts</strong> — used to load the Montserrat typeface. Google may log the request. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
+            <li><strong>GitHub Pages</strong> — the hosting infrastructure serving this site. GitHub may collect standard server log data. See <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub's Privacy Statement</a>.</li>
+            <li><strong>Web3Forms</strong> — used only when you submit the contact form. No cookies are set by Web3Forms on page load. See <a href="https://web3forms.com/privacy" target="_blank" rel="noopener">Web3Forms Privacy Policy</a>.</li>
+          </ul>
+          <p>We do not use advertising cookies, analytics cookies, social media tracking pixels or any behavioural profiling technologies.</p>
+        </div>
+
+        <div class="legal-section">
+          <h2>3. Managing cookies</h2>
+          <p>Because this website sets no first-party cookies, there is nothing to opt out of on our side. To control cookies set by third-party services, you can:</p>
+          <ul>
+            <li>Use your browser's built-in settings to block or delete cookies — all major browsers (Chrome, Firefox, Safari, Edge) include these controls under Settings → Privacy</li>
+            <li>Use a browser extension or DNS-based content blocker to prevent requests to Google Fonts or other third-party domains</li>
+          </ul>
+          <p>Please note that blocking certain requests (such as Google Fonts) may affect how the website is displayed, but will not affect its core functionality.</p>
+        </div>
+
+        <div class="legal-section">
+          <h2>4. Changes to this notice</h2>
+          <p>If we introduce new technologies that use cookies or local storage, we will update this notice before doing so. The date at the top of this page reflects the most recent revision.</p>
+        </div>
+
+        <div class="legal-section">
+          <h2>5. Contact</h2>
+          <p>Questions about our use of cookies can be directed to <a href="mailto:info@1stdata.to">info@1stdata.to</a>.</p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <div id="global-footer"></div>
+
+  <script>
+    async function loadGlobalHeader(){
+      const container=document.getElementById('global-header');
+      const response=await fetch('components/header.html');
+      container.innerHTML=await response.text();
+      const hdr=document.getElementById('hdr');
+      const setHeaderState=()=>hdr.classList.toggle('scrolled',scrollY>30);
+      setHeaderState();addEventListener('scroll',setHeaderState);
+      const mb=document.getElementById('menuBtn'),nl=document.getElementById('navlinks');
+      mb&&mb.addEventListener('click',()=>nl.classList.toggle('open'));
+      nl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nl.classList.remove('open')));
+    }
+    async function loadGlobalFooter(){
+      const container=document.getElementById('global-footer');
+      const response=await fetch('components/footer.html');
+      container.innerHTML=await response.text();
+    }
+    loadGlobalHeader();loadGlobalFooter();
+  </script>
+</body>
+</html>
